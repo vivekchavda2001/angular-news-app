@@ -1,0 +1,35 @@
+
+<nav class="navbar  fixed-top navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand text-light" href="#"><b>News</b></a>
+  <button class="navbar-toggler text-light" type="button" data-toggle="collapse" target="#navbar" role="button" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon  text-light"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbar">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link  text-light" href="javascript:void(0)" style="cursor:pointer"  (click)="changeCat('general');">General<span class="sr-only">(current)</span></a>
+      <a class="nav-item  text-light nav-link" href="javascript:void(0)" style="cursor:pointer"   (click)="changeCat('business');">Business</a>
+      <a class="nav-item text-light nav-link" href="javascript:void(0)" (click)="changeCat('entertainment');">Entertaiment</a>
+      <a class="nav-item text-light nav-link " href="javascript:void(0)" (click)="changeCat('health');">Health</a>
+      <a class="nav-item text-light nav-link " href="javascript:void(0)" (click)="changeCat('science');">Science</a>
+      <a class="nav-item text-light nav-link " href="javascript:void(0)" (click)="changeCat('sports');">Sports</a>
+      <a class="nav-item text-light nav-link " href="javascript:void(0)" (click)="changeCat('technology');">Tech</a>
+    </div>
+    
+    
+  </div>
+</nav>
+<br/><br/><br/>
+<div class="sidenav active"><br/><br/>
+  <a class="nav-item nav-link  text-light" href="javascript:void(0)" style="cursor:pointer"  (click)="changeCountry('in');">India</a>
+  <a class="nav-item text-light nav-link" href="javascript:void(0)" (click)="changeCountry('us');">USA</a>
+  <a class="nav-item text-light nav-link " href="javascript:void(0)" (click)="changeCountry('au');">Australia</a>
+  <a class="nav-item text-light nav-link " href="javascript:void(0)" (click)="changeCountry('fr');">France</a>
+  <a class="nav-item text-light nav-link " href="javascript:void(0)" (click)="changeCountry('gb');">UK</a>
+  <a class="nav-item  text-light nav-link" href="javascript:void(0)" style="cursor:pointer"   (click)="changeCountry('ru');">Russia</a>
+</div>
+
+<div class="main">
+<app-news [ctgry]="category" [country]="country"></app-news>
+</div>
+
+

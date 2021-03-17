@@ -1,0 +1,29 @@
+
+
+<div class="w-60 container card" >
+    <h1 class="mt-30 text-center" *ngIf="data.length <= 0">No Result Found</h1>
+  <div *ngFor="let news of data | paginate: { itemsPerPage: 5, currentPage: p }">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light" >
+      <img
+        src="{{ news.urlToImage  }}"
+        class="w-100 img-responsive"
+        
+      />
+    
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{news.title}}</h5>
+      <p class="card-text">
+        {{news.description}}...
+      </p>
+      <span class="card-text">
+      
+      </span><br/>
+      <a href="{{news.url}}" target="_blank" class="btn btn-primary">Read More....</a>
+    </div>
+  </div>
+    
+  <div class="text-right">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+  </div>
